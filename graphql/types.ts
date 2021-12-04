@@ -31,14 +31,20 @@ Usuarios: [Usuario]
 }
 
 type Mutation{
-    crearUsuario(|
-        nombre: String!
+    crearUsuario(
+    nombre: String!
     apellido: String!
     identificacion: String!
     correo: String!
-    estado: Enum_Estado_Usuario!
+    estado: Enum_Estado_Usuario v 
     tipo_usuario:enum_tipo_usuario!
     ): Usuario
+
+
+    editarUsuario(()
+
+    eliminarUsuario(_id:String!, correo:String):Usuario
+    }
 }
 `
 ;

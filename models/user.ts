@@ -21,12 +21,14 @@ const userSchema = new Schema<User>({
     apellidos:{
         type:String,
         required:true,
+        
     },    
 
     identificacion:{
         type:String,
         requiered:true,
         unique:true,
+        
     },
     correo:{
         type:String,
@@ -41,7 +43,7 @@ const userSchema = new Schema<User>({
     estado:{
         type:String,
         required:true,
-        enum: ['PENDIENTE','NO_AUTORIZADO','AUTORIZADO'],
+        enum: Enum_Estado_Usuario,
         default:Enum_Estado_Usuario.PENDIENTE,
 
     },

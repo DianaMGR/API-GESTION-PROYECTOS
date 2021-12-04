@@ -8,22 +8,42 @@ const resolvers = {
         },
     },
 
-    Mutaion:{
+    Mutation:{
         crearUsuario: async (parent, args)=>{
             const usuarioCreado = await UserModel.create({
-                nombre: args.nombre,
-                apellido: args.apellido,
+                nombres: args.nombre,
+                apellidos: args.apellido,
                 identificacion: args.identificacion,
                 correo: args.correo,
                 estado: args.estado,
                 tipo_usuario: args.tipo_usuario,
             });
+
+            if (Object.keys(args).includes('estado')){
+                usuarioCreado.estado = args.estado;
+            }
+
             return usuarioCreado;
         },
+        eliminarUsuario: async (parent, args)=>{
+            if(Object.keys(args).includes('_id'))
+            {
+            const usuarioEliminado =await UserModel.findOneAndDelete({_id: args._id});
+            return usuarioEliminado;
+
+            } else if (Object.keys(args).includes('correo')){
+
+            const usuarioEliminado =await UserModel.findOneAndDelete({correo: args.correo});
+            return usuarioEliminado;
+
+            }
+
+        
+
+        },
+
+           
     },
-
-
 };
     
-   
-export { resolvers };
+ export { resolvers };
