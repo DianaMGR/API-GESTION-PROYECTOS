@@ -11,6 +11,7 @@ estado: Enum_Estado_Proyecto;
 fase: Enum_Fase_Proyecto;
 lider:Schema.Types.ObjectId;
 
+
 }
 
 const projectSchema = new Schema<Project>({
@@ -39,7 +40,7 @@ estado:{
 fase:{
     type: String,
     enum: Enum_Fase_Proyecto,
-    default:Enum_Fase_Proyecto.nula,
+    default:Enum_Fase_Proyecto.NULA,
 },
 
 lider:{

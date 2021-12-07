@@ -9,10 +9,6 @@ enum Enum_Estado_Usuario{
     NO_AUTORIZADO='NO_AUTORIZADO',
     AUTORIZADO='AUTORIZADO',
 }
-
-
-
-
 enum Enum_Estado_Proyecto{
     ACTIVO='ACTIVO',
     INACTIVO='INACTIVO',
@@ -22,7 +18,7 @@ enum Enum_Fase_Proyecto{
 INICIADO='INICIADO',
 EN_PROCESO='EN_PROCESO',
 TERMINADO='TERMNADO',
-nula=' ',
+NULA=' ',
     
 }
 enum Enum_Tipo_Objetivo{
