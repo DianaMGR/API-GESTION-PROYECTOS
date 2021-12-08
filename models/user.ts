@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import {Enum_Estado_Usuario, Enum_tipo_usuario} from './enums';
+import {Enum_EstadoUsuario, Enum_tipousuario} from './enums';
 
 
 
@@ -8,8 +8,8 @@ interface User{
     apellidos: string;
     identificacion: string;
     correo: string;
-    tipo_usuario: Enum_tipo_usuario;
-    estado:Enum_Estado_Usuario,
+    tipo_usuario: Enum_tipousuario;
+    estado:Enum_EstadoUsuario,
 
 }
 
@@ -38,13 +38,13 @@ const userSchema = new Schema<User>({
     tipo_usuario:{
         type:String,
         required:true,
-        enum: Enum_tipo_usuario,
+        enum: Enum_tipousuario,
     },
     estado:{
         type:String,
         required:true,
-        enum: Enum_Estado_Usuario,
-        default:Enum_Estado_Usuario.PENDIENTE,
+        enum: Enum_EstadoUsuario,
+        default:Enum_EstadoUsuario.PENDIENTE,
 
     },
 

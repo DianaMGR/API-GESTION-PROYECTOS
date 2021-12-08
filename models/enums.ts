@@ -1,10 +1,10 @@
-enum Enum_tipo_usuario{
+enum Enum_tipousuario{
     ESTUDIANTE ='ESTUDIANTE',
     LIDER = 'LIDER',
     ADMINISTRADOR = 'ADMINISTRADOR',
 }
 
-enum Enum_Estado_Usuario{
+enum Enum_EstadoUsuario{
     PENDIENTE='PENDIENTE',
     NO_AUTORIZADO='NO_AUTORIZADO',
     AUTORIZADO='AUTORIZADO',
@@ -34,5 +34,5 @@ enum Enum_Estado_Inscripcion{
 }    
 
 
-export {Enum_tipo_usuario, Enum_Estado_Usuario, Enum_Fase_Proyecto,
+export {Enum_tipousuario, Enum_EstadoUsuario, Enum_Fase_Proyecto,
      Enum_Estado_Proyecto,Enum_Estado_Inscripcion, Enum_Tipo_Objetivo}
