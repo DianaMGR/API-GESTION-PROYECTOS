@@ -1,12 +1,17 @@
 //import { connect } from 'mongoose';
 import  mongoose  from 'mongoose';
 
+import dotenv from 'dotenv';
+
 const conectarBD = async () =>{
 
-  // console.log(process.env.DATABASE_URL );
+ dotenv.config();
 
-    return await mongoose.connect(process.env.DATABASE_URL ? process.env.DATABASE_URL:
-               'mongodb+srv://DianaGonzalez:simon0304@proyectoventas.cmbcl.mongodb.net/Gestion-Proyecto?retryWrites=true&w=majority'
+  console.log(process.env.DATABASE_URL );
+
+
+
+    return await mongoose.connect(process.env.DATABASE_URL 
     )
     .then(() =>{
         console.log('Conexion Exitosa');
