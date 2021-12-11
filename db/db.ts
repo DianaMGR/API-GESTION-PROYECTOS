@@ -7,7 +7,7 @@ const conectarBD = async () =>{
 
  dotenv.config();
 
-  console.log(process.env.DATABASE_URL );
+  //console.log(process.env.DATABASE_URL );
 
 
 
