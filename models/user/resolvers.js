@@ -41,7 +41,7 @@ const resolversUsuario ={
                 estado: args.estado,
                 tipo_usuario: args.tipo_usuario, 
              
-          }); 
+          },{new: true}); 
           return usuarioEditar;
         },  
 
