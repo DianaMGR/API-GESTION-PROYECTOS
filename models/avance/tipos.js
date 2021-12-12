@@ -13,7 +13,9 @@ type Avances {
 
 type Query{
     Avances:[Avances]
+    filtrarAvance(_id:String!):[Avances]
 }
+
 type Mutation{
     crearAvance(
     fecha:Date!
@@ -21,7 +23,8 @@ type Mutation{
     proyecto: String!
     creadopor:String!
     ):Avances
-}
+    
+}    
 
 `;
 export {tipoAvance};

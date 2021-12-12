@@ -18,13 +18,16 @@ input creacionObjetivo{
 type Proyecto{
     _id:ID!
     nombre: String!
-    presupuesto: Float!
-    fechaInicio: Date!
-    fechaFinal: Date
-    estado: Enum_Estado_Proyecto!
-    fase: Enum_Fase_Proyecto!
+    presupuesto:Float!
+    fechainicio:Date!
+    fechafinal:Date
+    estado:Enum_Estado_Proyecto!
+    fase:Enum_Fase_Proyecto!
     lider:Usuario!
     objetivos:[Objetivo]
+    avances:[Avances]
+    inscripciones:[Inscripcion]
+    
 }
 type Query{
     

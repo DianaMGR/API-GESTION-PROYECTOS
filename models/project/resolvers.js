@@ -1,12 +1,13 @@
 
-import { projectModel } from "./project";
+import { inscripcionModel } from "../inscripcion/inscripcion.js";
+import { projectModel } from "./project.js";
 
 const resolversProyecto ={
   
     Query:{
 
         Proyectos: async (parent, args)=>{
-            const proyectos = await projectModel.find().populate('lider');   
+            const proyectos = await projectModel.find().populate('avances').populate('inscripciones'); 
             return proyectos;
                 },
           
@@ -25,8 +26,16 @@ const resolversProyecto ={
        lider: args.lider,
        objetivos:args.objetivos,
       });
+  
       return proyectoCreado;
     },
+    aprobarInscripcion:async(parent, args)=>{ 
+        const inscripcionAprobada = await inscripcionModel.findByIdAndUpdate(args.id,{
+            estado:args.estado,
+            fechaIngreso:Date.now(),
+        });
+        return inscripcionAprobada
+    }
     },
 };
 
