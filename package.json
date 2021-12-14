@@ -1,11 +1,12 @@
 {
   "name": "aplicacion_proyectos",
-  "version": "1",
+  "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/DianaMGR/API-GESTION-PROYECTOS.git",
   "author": "DianaMGR <dianagr2005@hotmail.com>",
   "license": "MIT",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js ",
     "dev":"nodemon index.jx"
     
