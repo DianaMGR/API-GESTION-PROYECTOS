@@ -1,17 +1,5 @@
 import mongoose from 'mongoose';
-//import {Enum_EstadoUsuario, Enum_tipousuario} from '../enum/enums.js';
 
-
-
-//interface User{
-  //  nombres:string;
-   // apellidos: string;
-   // identificacion: string;
-   // correo: string;
-   // tipo_usuario: Enum_tipousuario;
-   // estado:Enum_EstadoUsuario,
-
-//}
 const {Schema, model} = mongoose;
 const userSchema = new Schema({
     
@@ -35,6 +23,10 @@ const userSchema = new Schema({
         type:String,
         required:true, 
         unique:true,
+    },
+    password:{
+     type:String,
+     required:true,   
     },
 
     tipo_usuario:{
