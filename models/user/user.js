@@ -39,7 +39,7 @@ const userSchema = new Schema({
 
     tipo_usuario:{
         type:String,
-        required:true,
+        required:false,
         enum: ['ESTUDIANTE','LIDER','ADMINISTRADOR'],
     },
     estado:{

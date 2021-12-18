@@ -39,7 +39,7 @@ const resolversUsuario ={
                 identificacion: args.identificacion,
                 correo: args.correo,
                 estado: args.estado,
-                tipo_usuario: args.tipo_usuario, 
+                
              
           },{new: true}); 
           return usuarioEditar;

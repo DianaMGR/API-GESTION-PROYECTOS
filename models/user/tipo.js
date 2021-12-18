@@ -13,7 +13,7 @@ type Usuario{
     identificacion: String!
     correo: String!
     estado: Enum_EstadoUsuario
-    tipo_usuario:Enum_tipousuario!
+    tipo_usuario:Enum_tipousuario
 }
 
 type Objetivo{
@@ -41,7 +41,7 @@ type Mutation{
     identificacion: String!
     correo: String!
     estado: Enum_EstadoUsuario 
-    tipo_usuario:Enum_tipousuario!
+    
    ): Usuario
 
    eliminarUsuario(
@@ -57,7 +57,7 @@ type Mutation{
     identificacion: String!
     correo: String!
     estado: Enum_EstadoUsuario 
-    tipo_usuario:Enum_tipousuario!   
+    
     ): Usuario
     
     
