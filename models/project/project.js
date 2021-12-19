@@ -2,18 +2,7 @@ import mongoose from 'mongoose';
 //import { Enum_Estado_Proyecto, Enum_Fase_Proyecto, Enum_Tipo_Objetivo } from '../enum/enums.js';
 import { UserModel } from '../user/user.js';
 
-//interface Project{
-//nombre:string;
-//presupuesto:number;
-//fechainicio:Date;
-//fechafinal:Date;
-//estado: Enum_Estado_Proyecto;
-//fase: Enum_Fase_Proyecto;
-///lider:Schema.Types.ObjectId;
-//objetivos:[{descripcion:String; tipo:Enum_Tipo_Objetivo}]
 
-
-//}
 const {Schema, model}= mongoose;
 const projectSchema = new Schema({
 nombre: {
